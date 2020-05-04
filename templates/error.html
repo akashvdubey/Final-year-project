@@ -1,0 +1,9 @@
+{%extends 'Layout.html'%}
+{%block title%}
+error
+{%endblock%}
+
+{%block body%}
+<h1 class="alert alert-warning">{{message}}</h1>
+<a href="{{url_for('index')}}">GO to login page</a>
+{%endblock%}
