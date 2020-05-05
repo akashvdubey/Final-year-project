@@ -1,0 +1,10 @@
+{%extends 'Layout.html'%}
+{%block title%}
+Success
+{%endblock%}
+
+{%block body%}
+<h1 class="alert alert-success">recognized text = {{message[0]}}, probability = {{message[1]}}</h1>
+<a href="{{url_for('index')}}">INFER</a>
+{{img}}
+{%endblock%}

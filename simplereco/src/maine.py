@@ -588,7 +588,7 @@ def infer(model, fnImg):
 	(recognized, probability) = model.inferBatch(batch, True)
 	print('Recognized:', '"' + recognized[0] + '"')
 	print('Probability:', probability[0])
-	return str((recognized[0],probability[0]))
+	return ( (str(recognized[0]),str(probability[0])) )
 
 
 def main():

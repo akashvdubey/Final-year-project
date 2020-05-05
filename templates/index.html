@@ -1,11 +1,20 @@
 {%extends "Layout.html"%}
 {%block title%}
-books review
+Handwriting recognition
 {%endblock%}
-{%block heading%}
-<h1>Welcome to Handwritten text recogintion</h1>
-{%endblock%}
+
+{%block heading%}<center><h1 class = "display-4">Welcome to Handwritten text recogintion</h1></center>{%endblock%}
+
 {%block body%}
-<h1 class="alert alert-primary">this is the place</h1>
+<center><h1 class="alert alert-primary">Upload Handwritten text in png format</h1></center>
+<!doctype html>
+<center>
+<title>Upload new File</title>
+<h1>Upload new File</h1>
+<form method=post enctype=multipart/form-data style="border: 3px dotted gray"  >
+  <input type=file name=file>
+  <input type=submit value=Upload>
+</form>
+</center>
 
 {%endblock%}
