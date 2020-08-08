@@ -4,7 +4,15 @@ Success
 {%endblock%}
 
 {%block body%}
-<h1 class="alert alert-success">recognized text = {{message[0]}}, probability = {{message[1]}}</h1>
-<a href="{{url_for('index')}}">INFER</a>
-{{img}}
+{%if not message%}
+{%for message in get_flashed_messages()%}
+<center><p class="alert alert-success">{{message.upper()}}</p><center>
+{%endfor%}
+<center><a href="{{url_for('index')}}"><button type="button" name="infer" class = "btn btn-primary">INFER IMAGE</button></a></center>
+{%else%}
+<center><img src = "static/tesst.png" height="128px" width = "512px"></img></center>
+<center><h1 class="alert alert-success">recognized text = {{message[0]}}</h1></center>
+<center><h1 class="alert alert-success">probability = {{message[1]}}</h1></center>
+<center><a href="{{url_for('upload_file')}}"><button class = "btn btn-primary" type="button" name="Infer another image">Infer another image</button></a></center>
+{%endif%}
 {%endblock%}

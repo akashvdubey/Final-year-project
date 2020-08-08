@@ -3,18 +3,23 @@
 Handwriting recognition
 {%endblock%}
 
-{%block heading%}<center><h1 class = "display-4">Welcome to Handwritten text recogintion</h1></center>{%endblock%}
+{%block heading%}<center><h1 class = "display-4">Welcome to Handwritten Text Recogintion</h1></center>{%endblock%}
 
 {%block body%}
+{%for message in get_flashed_messages()%}
+<center><p class="alert alert-danger">{{message.upper()}}</p><center>
+{%endfor%}
 <center><h1 class="alert alert-primary">Upload Handwritten text in png format</h1></center>
 <!doctype html>
 <center>
 <title>Upload new File</title>
 <h1>Upload new File</h1>
-<form method=post enctype=multipart/form-data style="border: 3px dotted gray"  >
+<div class = "form">
+<form method=post enctype=multipart/form-data style="border: 3px solid white"   >
   <input type=file name=file>
   <input type=submit value=Upload>
 </form>
+</div>
 </center>
 
 {%endblock%}

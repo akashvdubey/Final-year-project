@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scaling= 1.0">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>{%block title%}{%endblock%}</title>
     <style media="screen">
-        @media (max-width:400px) {
+        @media (max-width:600px) {
           body{
                 background-color: green;
               }
             }
-        @media (min-width:399px){
+        @media (min-width:599px){
           body{
-            background-color:white;
-            background-color: #A5F2F3;
+            background-color: rgb(48,10,36);
               }
             }
+        .form {
+          position: absolute;
+          height: 200px;
+          left: 37%;
+          top: 50%;
+        }
     </style>
   </head>
   <body class="text-secondary">
-  {%block heading%}<h1 class = "display-2">Welcome to Handwritten text recogintion</h1>{%endblock%}
+  {%block heading%}<center><h1 class = "display-4">Welcome to Handwritten text recogintion</h1></center>{%endblock%}
   {%block body%} {%endblock%}
   </body>
 </html>
